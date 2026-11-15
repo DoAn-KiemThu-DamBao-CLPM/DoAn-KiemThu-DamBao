@@ -1,0 +1,12 @@
+--- a/config/database.php
++++ b/config/database.php
+@@ -20,7 +20,8 @@
+ // 'development' (XAMPP): password-reset links are shown on screen because no mail server exists.
+ // Set to 'production' when deploying — links are then only sent by e-mail.
+ if (!defined('APP_ENV')) {
+-    define('APP_ENV', 'development');
++    // Safe default: reset links are only shown on screen when the developer explicitly opts in (ANYN_ENV=development).
++    define('APP_ENV', getenv('ANYN_ENV') ?: 'production');
+ }
+ 
+ // Basic security headers

@@ -1,0 +1,147 @@
+[
+ {
+  "id": "UI-01",
+  "status": "Pass",
+  "actual": "",
+  "duration": 0.8148166300000099,
+  "evidence": [
+   "success box: Account created! You can now sign in.\nSign in →"
+  ],
+  "screens": [
+   "screenshots/UI-01_register_success.png"
+  ],
+  "executed_at": "2026-11-14 09:11:39",
+  "implements": "TC-REG-01",
+  "bug": []
+ },
+ {
+  "id": "UI-02",
+  "status": "Pass",
+  "actual": "",
+  "duration": 0.8393267059999943,
+  "evidence": [
+   "sai mật khẩu → Invalid email or password.",
+   "ô email sau khi đăng nhập sai: ''",
+   "sau đăng nhập đúng URL = http://127.0.0.1:8765/anyn/index.php"
+  ],
+  "screens": [
+   "screenshots/UI-02_login_invalid.png",
+   "screenshots/UI-02_login_ok.png"
+  ],
+  "executed_at": "2026-11-14 09:11:39",
+  "implements": "TC-LOG-01",
+  "bug": []
+ },
+ {
+  "id": "UI-03",
+  "status": "Pass",
+  "actual": "",
+  "duration": 0.37956831699999327,
+  "evidence": [
+   "UI hiển thị 4 thẻ, DB kỳ vọng 4; giá trị ô tìm kiếm = 'nightblade'"
+  ],
+  "screens": [
+   "screenshots/UI-03_search.png"
+  ],
+  "executed_at": "2026-11-14 09:11:39",
+  "implements": "TC-BRW-02",
+  "bug": []
+ },
+ {
+  "id": "UI-04",
+  "status": "Pass",
+  "actual": "",
+  "duration": 0.6905583740000054,
+  "evidence": [
+   "ratings row={'score': 4}, bots.total_rating=4"
+  ],
+  "screens": [
+   "screenshots/UI-04_rating.png"
+  ],
+  "executed_at": "2026-11-14 09:11:39",
+  "implements": "TC-RAT-01",
+  "bug": []
+ },
+ {
+  "id": "UI-05",
+  "status": "Pass",
+  "actual": "",
+  "duration": 1.511110489999993,
+  "evidence": [
+   "comment visible=True, username visible=True"
+  ],
+  "screens": [
+   "screenshots/UI-05_comment.png"
+  ],
+  "executed_at": "2026-11-14 09:11:39",
+  "implements": "TC-CMT-01",
+  "bug": []
+ },
+ {
+  "id": "UI-06",
+  "status": "Pass",
+  "actual": "",
+  "duration": 1.8312703109999973,
+  "evidence": [
+   "nút like: '👍 1' → '👍 2'",
+   "bấm lần 2 (gỡ reaction): '👍 2' → '👍 1'"
+  ],
+  "screens": [
+   "screenshots/UI-06_reaction_on.png"
+  ],
+  "executed_at": "2026-11-14 09:11:39",
+  "implements": "TC-GAL-02",
+  "bug": []
+ },
+ {
+  "id": "UI-07",
+  "status": "Fail",
+  "actual": "bấm nút trả HTTP 403: 'Invalid or expired security token' — không thể thêm bot qua trang này\nassert (403 != 403)",
+  "duration": 0.5987631120000145,
+  "evidence": [
+   "POST → HTTP 403; trang kết quả: 'Security Error\\n\\nInvalid or expired security token. Please go back and try again.\\n\\nGo back'; bot tạo ra=False"
+  ],
+  "screens": [
+   "screenshots/UI-07_admin_add_bot.png"
+  ],
+  "executed_at": "2026-11-14 09:11:39",
+  "implements": "TC-ADM-08",
+  "bug": [
+   "BUG-016"
+  ]
+ },
+ {
+  "id": "UI-08",
+  "status": "Pass",
+  "actual": "",
+  "duration": 0.9982442270000007,
+  "evidence": [
+   "/anyn/index.php: scrollWidth=375",
+   "/anyn/pages/login.php: scrollWidth=375",
+   "/anyn/pages/register.php: scrollWidth=375",
+   "/anyn/pages/gallery.php: scrollWidth=375",
+   "sidebar bbox sau khi bấm hamburger = {'x': 0, 'y': 0, 'width': 300, 'height': 812}"
+  ],
+  "screens": [
+   "screenshots/UI-08_mobile_menu.png"
+  ],
+  "executed_at": "2026-11-14 09:11:39",
+  "implements": "NF-USA-01",
+  "bug": []
+ },
+ {
+  "id": "UI-09",
+  "status": "Pass",
+  "actual": "",
+  "duration": 0.795121684999998,
+  "evidence": [
+   "data-theme: ban đầu='light' → sau bấm='dark' → sau reload='dark'"
+  ],
+  "screens": [
+   "screenshots/UI-09_dark_mode.png"
+  ],
+  "executed_at": "2026-11-14 09:11:39",
+  "implements": "NF-USA-02",
+  "bug": []
+ }
+]

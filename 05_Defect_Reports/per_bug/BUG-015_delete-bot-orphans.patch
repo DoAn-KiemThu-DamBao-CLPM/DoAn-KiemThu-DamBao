@@ -1,0 +1,12 @@
+--- a/pages/admin_bots.php
++++ b/pages/admin_bots.php
+@@ -106,6 +106,9 @@
+     csrf_verify();
+     $did = (int)$_POST['delete_id'];
+     $pdo->prepare("DELETE FROM bot_themes WHERE bot_id=?")->execute([$did]);
++    $pdo->prepare("DELETE FROM ratings WHERE bot_id=?")->execute([$did]);
++    $pdo->prepare("DELETE FROM comments WHERE bot_id=?")->execute([$did]);
++    $pdo->prepare("DELETE FROM bot_group_members WHERE bot_id=?")->execute([$did]);
+     $pdo->prepare("DELETE FROM bots WHERE id=?")->execute([$did]);
+     header("Location: admin_bots.php?msg=Bot deleted!");
+     exit;

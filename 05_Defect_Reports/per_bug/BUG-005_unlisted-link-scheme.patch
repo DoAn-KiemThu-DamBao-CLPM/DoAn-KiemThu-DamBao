@@ -1,0 +1,11 @@
+--- a/pages/ideas.php
++++ b/pages/ideas.php
+@@ -75,7 +75,7 @@
+             $vis = 'published';
+         }
+         if ($vis === 'unlisted') {
+-            $link = trim($_POST['unlisted_link'] ?? '');
++            $link = safe_http_url(trim($_POST['unlisted_link'] ?? '')) ?? '';   // only http(s) links are accepted
+             if ($link === '') {
+                 header('Location: ideas.php?error=link_required');
+                 exit;

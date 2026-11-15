@@ -1,0 +1,138 @@
+{
+ "baseline": {
+  "home": {
+   "p50": 2.8,
+   "p95": 3.6,
+   "max": 4.8,
+   "mean": 2.9,
+   "kb": 71.0,
+   "errors": 0
+  },
+  "home?search": {
+   "p50": 2.3,
+   "p95": 4.0,
+   "max": 4.7,
+   "mean": 2.5,
+   "kb": 51.7,
+   "errors": 0
+  },
+  "bot_detail": {
+   "p50": 2.4,
+   "p95": 3.1,
+   "max": 3.1,
+   "mean": 2.6,
+   "kb": 47.5,
+   "errors": 0
+  },
+  "gallery": {
+   "p50": 5.3,
+   "p95": 6.5,
+   "max": 6.8,
+   "mean": 5.2,
+   "kb": 73.1,
+   "errors": 0
+  },
+  "community_gallery": {
+   "p50": 4.6,
+   "p95": 6.7,
+   "max": 37.9,
+   "mean": 5.8,
+   "kb": 48.9,
+   "errors": 0
+  },
+  "ideas": {
+   "p50": 4.6,
+   "p95": 5.4,
+   "max": 5.4,
+   "mean": 4.6,
+   "kb": 85.5,
+   "errors": 0
+  },
+  "login": {
+   "p50": 2.0,
+   "p95": 2.5,
+   "max": 2.6,
+   "mean": 2.0,
+   "kb": 14.5,
+   "errors": 0
+  },
+  "commission": {
+   "p50": 4.1,
+   "p95": 5.1,
+   "max": 5.6,
+   "mean": 4.1,
+   "kb": 36.7,
+   "errors": 0
+  }
+ },
+ "load": {
+  "1": {
+   "throughput": 252.3,
+   "p50": 4.0,
+   "p95": 5.7,
+   "p99": 8.4,
+   "errors": 0
+  },
+  "5": {
+   "throughput": 695.2,
+   "p50": 6.4,
+   "p95": 15.2,
+   "p99": 19.1,
+   "errors": 0
+  },
+  "10": {
+   "throughput": 528.4,
+   "p50": 17.1,
+   "p95": 35.3,
+   "p99": 40.3,
+   "errors": 0
+  },
+  "20": {
+   "throughput": 542.1,
+   "p50": 28.8,
+   "p95": 64.5,
+   "p99": 83.4,
+   "errors": 0
+  }
+ },
+ "volume": {
+  "rows": {
+   "gallery": 12,
+   "community_posts": 12,
+   "ideas": 25,
+   "bots": 41,
+   "comments": 13
+  },
+  "pages": {
+   "home": {
+    "median_ms": 2.6,
+    "kb": 71.0
+   },
+   "gallery": {
+    "median_ms": 4.6,
+    "kb": 73.1
+   },
+   "community_gallery": {
+    "median_ms": 4.4,
+    "kb": 48.9
+   },
+   "ideas": {
+    "median_ms": 4.9,
+    "kb": 85.5
+   }
+  }
+ },
+ "queries": {
+  "home": 15,
+  "home?search": 6,
+  "bot_detail": 5,
+  "gallery": 23,
+  "community_gallery": 21,
+  "ideas": 25,
+  "login": 0,
+  "commission": 17,
+  "register": 0,
+  "shop_guest": 17,
+  "about": 6
+ }
+}

@@ -1,0 +1,19 @@
+--- a/includes/gems_lib.php
++++ b/includes/gems_lib.php
+@@ -130,11 +130,13 @@
+ 
+ function spendGems(PDO $pdo, int $userId, int $amount): bool
+ {
+-    if ($amount <= 0 || getUserGems($pdo, $userId) < $amount) {
++    if ($amount <= 0) {
+         return false;
+     }
+-    $pdo->prepare('UPDATE users SET gems = gems - ? WHERE id = ?')->execute([$amount, $userId]);
+-    return true;
++    // atomic check-and-debit: the balance test and the update are ONE statement (no read-then-write race)
++    $st = $pdo->prepare('UPDATE users SET gems = gems - ? WHERE id = ? AND gems >= ?');
++    $st->execute([$amount, $userId, $amount]);
++    return $st->rowCount() === 1;
+ }
+ 
+ function tryAwardMission(PDO $pdo, int $userId, string $missionKey): array

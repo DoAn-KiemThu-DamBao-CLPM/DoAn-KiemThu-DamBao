@@ -1,0 +1,290 @@
+[
+ {
+  "id": "NF-PERF-01",
+  "status": "Pass",
+  "actual": "",
+  "duration": 5.814960026000023,
+  "evidence": [
+   "[big] home               p50=    3.5 ms  p95=    4.2 ms  max=    4.2 ms      71.1 KB  lỗi=0",
+   "[big] home?search        p50=    3.0 ms  p95=    3.6 ms  max=    3.6 ms      66.9 KB  lỗi=0",
+   "[big] bot_detail         p50=    8.4 ms  p95=   10.5 ms  max=   11.1 ms    1078.0 KB  lỗi=0",
+   "[big] gallery            p50=  105.3 ms  p95=  126.8 ms  max=  133.4 ms   13128.2 KB  lỗi=0",
+   "[big] community_gallery  p50=   35.9 ms  p95=   43.8 ms  max=   46.7 ms    3971.3 KB  lỗi=0",
+   "[big] ideas              p50=    7.2 ms  p95=    8.2 ms  max=    8.3 ms     673.2 KB  lỗi=0",
+   "[big] login              p50=    1.9 ms  p95=    2.3 ms  max=    2.9 ms      14.5 KB  lỗi=0",
+   "[big] commission         p50=    3.8 ms  p95=    4.3 ms  max=    6.0 ms      36.7 KB  lỗi=0"
+  ],
+  "screens": [],
+  "executed_at": "2026-11-14 09:13:14",
+  "category": "Performance / Response time",
+  "bug": []
+ },
+ {
+  "id": "NF-PERF-02",
+  "status": "Pass",
+  "actual": "",
+  "duration": 15.699377513999991,
+  "evidence": [
+   "[big]  1 người dùng:   29.5 req/s | p50=    9.2 | p95=  117.8 | p99=  144.4 ms | lỗi=0",
+   "[big]  5 người dùng:   66.9 req/s | p50=   34.0 | p95=  237.0 | p99=  340.6 ms | lỗi=0",
+   "[big] 10 người dùng:   65.2 req/s | p50=  113.0 | p95=  402.1 | p99=  569.1 ms | lỗi=0",
+   "[big] 20 người dùng:   70.1 req/s | p50=  205.5 | p95=  511.1 | p99=  627.1 ms | lỗi=0"
+  ],
+  "screens": [],
+  "executed_at": "2026-11-14 09:13:14",
+  "category": "Performance / Load",
+  "bug": []
+ },
+ {
+  "id": "NF-PERF-03",
+  "status": "Fail",
+  "actual": "trang danh sách không phân trang, vượt ngưỡng: ['gallery: 13128 KB / 105 ms', 'community_gallery: 3971 KB / 38 ms']\nassert not ['gallery: 13128 KB / 105 ms', 'community_gallery: 3971 KB / 38 ms']",
+  "duration": 0.8195105780000063,
+  "evidence": [
+   "[big] số dòng dữ liệu: {'gallery': 5012, 'community_posts': 2004, 'ideas': 502, 'bots': 400, 'comments': 3004}",
+   "[big] home                    71.1 KB, trung vị      3.6 ms",
+   "[big] gallery              13128.2 KB, trung vị    104.9 ms",
+   "[big] community_gallery     3971.3 KB, trung vị     37.7 ms",
+   "[big] ideas                  673.2 KB, trung vị      9.6 ms"
+  ],
+  "screens": [],
+  "executed_at": "2026-11-14 09:13:14",
+  "category": "Performance / Scalability",
+  "bug": [
+   "BUG-019"
+  ]
+ },
+ {
+  "id": "NF-PERF-04",
+  "status": "Pass",
+  "actual": "",
+  "duration": 1.898244941999991,
+  "evidence": [
+   "[big] home                15 truy vấn, thời gian SQL 1.02 ms / tổng 1.57 ms",
+   "[big] home?search          6 truy vấn, thời gian SQL 0.44 ms / tổng 1.19 ms",
+   "[big] bot_detail           5 truy vấn, thời gian SQL 0.67 ms / tổng 3.86 ms",
+   "[big] gallery             23 truy vấn, thời gian SQL 5.3 ms / tổng 48.87 ms",
+   "[big] community_gallery   21 truy vấn, thời gian SQL 4.01 ms / tổng 24.14 ms",
+   "[big] ideas               25 truy vấn, thời gian SQL 2.63 ms / tổng 5.52 ms",
+   "[big] login                0 truy vấn, thời gian SQL 0 ms / tổng 0.08 ms",
+   "[big] commission          17 truy vấn, thời gian SQL 1.51 ms / tổng 1.77 ms",
+   "[big] register             0 truy vấn, thời gian SQL 0 ms / tổng 0.06 ms",
+   "[big] shop_guest          17 truy vấn, thời gian SQL 1.38 ms / tổng 1.63 ms",
+   "[big] about                6 truy vấn, thời gian SQL 1 ms / tổng 2.01 ms"
+  ],
+  "screens": [],
+  "executed_at": "2026-11-14 09:13:14",
+  "category": "Performance / Database",
+  "bug": []
+ },
+ {
+  "id": "NF-SEC-01",
+  "status": "Pass",
+  "actual": "",
+  "duration": 0.5093334220000258,
+  "evidence": [
+   "profile.php                không token=403 | token phiên khác=403",
+   "shop.php                   không token=403 | token phiên khác=403",
+   "ideas.php                  không token=403 | token phiên khác=403",
+   "submit_idea.php            không token=403 | token phiên khác=403",
+   "bot_detail.php?id=1        không token=403 | token phiên khác=403",
+   "user.php?id=3              không token=403 | token phiên khác=403",
+   "gallery.php                không token=403 | token phiên khác=403",
+   "community_gallery.php      không token=403 | token phiên khác=403",
+   "commission.php             không token=403 | token phiên khác=403",
+   "admin_bots.php             không token=403 | token phiên khác=403",
+   "login.php không token = 403 (login CSRF)",
+   "dữ liệu sau các yêu cầu bị chặn: gems=0, bảng thay đổi={}",
+   "[đối chứng] shop.php                   token đúng=200",
+   "[đối chứng] ideas.php                  token đúng=302",
+   "[đối chứng] submit_idea.php            token đúng=200",
+   "[đối chứng] bot_detail.php?id=1        token đúng=302",
+   "[đối chứng] user.php?id=3              token đúng=302",
+   "[đối chứng] gallery.php                token đúng=302",
+   "[đối chứng] community_gallery.php      token đúng=302",
+   "[đối chứng] commission.php             token đúng=200"
+  ],
+  "screens": [],
+  "executed_at": "2026-11-14 09:12:44",
+  "category": "Security / CSRF",
+  "bug": []
+ },
+ {
+  "id": "NF-SEC-02",
+  "status": "Pass",
+  "actual": "",
+  "duration": 0.21428339400000596,
+  "evidence": [
+   "Set-Cookie: PHPSESSID=…; path=/; HttpOnly; SameSite=Lax",
+   "cờ Secure: KHÔNG (chỉ chấp nhận được trên HTTP/XAMPP; bật khi triển khai HTTPS)",
+   "PHPSESSID trước/sau đăng nhập: dbrgnl… → bg3cm3…",
+   "gửi PHPSESSID tự đặt → máy chủ cấp ID: egrgku…",
+   "dùng lại cookie cũ sau logout → HTTP 302 login.php"
+  ],
+  "screens": [],
+  "executed_at": "2026-11-14 09:12:44",
+  "category": "Security / Session",
+  "bug": []
+ },
+ {
+  "id": "NF-SEC-03",
+  "status": "Pass",
+  "actual": "",
+  "duration": 0.1029279799999756,
+  "evidence": [
+   "CSP = frame-ancestors 'self'; base-uri 'self'; object-src 'none'; form-action 'self'",
+   "[khuyến nghị] CSP có script-src/default-src: False → CSP hiện không giảm thiểu được XSS",
+   "[khuyến nghị] X-Powered-By: PHP/8.3.6",
+   "[khuyến nghị] Strict-Transport-Security: (không có — chấp nhận được trên HTTP)",
+   "Cache-Control (đã đăng nhập): no-store, no-cache, must-revalidate"
+  ],
+  "screens": [],
+  "executed_at": "2026-11-14 09:12:44",
+  "category": "Security / Headers",
+  "bug": []
+ },
+ {
+  "id": "NF-SEC-04",
+  "status": "Pass",
+  "actual": "",
+  "duration": 0.37141964500003155,
+  "evidence": [
+   "user.php (bio)                             thô=False | đã escape=True",
+   "bot_detail.php (comment)                   thô=False | đã escape=True",
+   "ideas.php (idea fields)                    thô=False | đã escape=True",
+   "my_commissions.php                         thô=False | đã escape=True",
+   "admin_bots.php (commission + bot)          thô=False | đã escape=True",
+   "admin_community.php (title)                thô=False | đã escape=True",
+   "index.php (bot name)                       thô=False | đã escape=True",
+   "reflect: index.php?search                  thô=False | đã escape=True",
+   "reflect: admin_bots.php?msg                thô=False | đã escape=True",
+   "reflect: admin_groups.php?msg              thô=False | đã escape=True",
+   "reflect: ideas.php?msg                     thô=False | đã escape=True",
+   "reflect: community_gallery.php?msg         thô=False | đã escape=True",
+   "community_gallery.php (approved title)     thô=False | đã escape=True",
+   "bot_detail.php (bot name + description)    thô=False | đã escape=True",
+   "14/14 điểm hiển thị payload (đã escape); không hiển thị (không kết luận): không có"
+  ],
+  "screens": [],
+  "executed_at": "2026-11-14 09:12:44",
+  "category": "Security / XSS",
+  "bug": []
+ },
+ {
+  "id": "NF-SEC-05",
+  "status": "Pass",
+  "actual": "",
+  "duration": 0.3418035709999856,
+  "evidence": [
+   "60 yêu cầu gửi đi; vấn đề phát hiện: []"
+  ],
+  "screens": [],
+  "executed_at": "2026-11-14 09:12:44",
+  "category": "Security / Injection",
+  "bug": []
+ },
+ {
+  "id": "NF-SEC-06",
+  "status": "Pass",
+  "actual": "",
+  "duration": 0.22996313399997348,
+  "evidence": [
+   "'evil.php'                         → bị từ chối (kỳ vọng từ chối)",
+   "'evil.php.png'                     → bị từ chối (kỳ vọng từ chối)",
+   "'x.svg'                            → bị từ chối (kỳ vọng từ chối)",
+   "'doc.html'                         → bị từ chối (kỳ vọng từ chối)",
+   "'real.php'                         → ĐƯỢC NHẬN, lưu: /anyn/uploads/1794647555_idea_7e91016b6a5b.png (kỳ vọng nhận)",
+   "'../../../../tmp/traversal.png'    → ĐƯỢC NHẬN, lưu: /anyn/uploads/1794647555_idea_179a2e2a32ac.png (kỳ vọng nhận)",
+   "'poly.gif'                         → ĐƯỢC NHẬN, lưu: /anyn/uploads/1794647555_idea_d39329215487.gif (kỳ vọng nhận)",
+   "polyglot GIF phục vụ với Content-Type=image/gif, chứa chuỗi PHP thô=True, PHP thực thi=False"
+  ],
+  "screens": [],
+  "executed_at": "2026-11-14 09:12:44",
+  "category": "Security / Upload",
+  "bug": []
+ },
+ {
+  "id": "NF-SEC-07",
+  "status": "Pass",
+  "actual": "",
+  "duration": 0.22557707599997912,
+  "evidence": [
+   "hash: $2y$10$… (len 60); hai hash cùng mật khẩu khác nhau: True",
+   "môi trường production: không hiển thị liên kết → không đối chiếu được token (xem BUG-001)"
+  ],
+  "screens": [],
+  "executed_at": "2026-11-14 09:12:44",
+  "category": "Security / Credentials",
+  "bug": []
+ },
+ {
+  "id": "NF-SEC-08",
+  "status": "Pass",
+  "actual": "",
+  "duration": 0.19289514499999427,
+  "evidence": [
+   "sau mass-assignment: {'id': 85, 'role': 'user', 'gems': 0, 'total_spent': 0}"
+  ],
+  "screens": [],
+  "executed_at": "2026-11-14 09:12:44",
+  "category": "Security / Authorization",
+  "bug": []
+ },
+ {
+  "id": "NF-SEC-09",
+  "status": "Pass",
+  "actual": "",
+  "duration": 0.16717455200000586,
+  "evidence": [
+   "admin_bots.php         guest → HTTP 403",
+   "admin_bots.php         user  → HTTP 403",
+   "admin_groups.php       guest → HTTP 403",
+   "admin_groups.php       user  → HTTP 403",
+   "admin_community.php    guest → HTTP 403",
+   "admin_community.php    user  → HTTP 403",
+   "admin_stats.php        guest → HTTP 403",
+   "admin_stats.php        user  → HTTP 403",
+   "admin_add_bot.php      guest → HTTP 302",
+   "admin_add_bot.php      user  → HTTP 302"
+  ],
+  "screens": [],
+  "executed_at": "2026-11-14 09:12:44",
+  "category": "Security / Authorization",
+  "bug": [
+   "BUG-017"
+  ]
+ },
+ {
+  "id": "NF-SEC-10",
+  "status": "Blocked",
+  "actual": "BLOCKED: bản vá là quy tắc Apache (.htaccess) — máy chủ thử nghiệm PHP built-in không thi hành; cần chạy lại trên XAMPP/Apache",
+  "duration": 0.008074701999959188,
+  "evidence": [
+   "/anyn/sql/gems_shop.sql              → HTTP 200, 174 byte",
+   "/anyn/sql/accounts_security.sql      → HTTP 200, 2688 byte",
+   "/anyn/sql/ideas_workflow.sql         → HTTP 200, 528 byte",
+   "/anyn/gygyu.code-workspace           → HTTP 200, 90 byte",
+   "/anyn/includes/header.php            → HTTP 200, 28521 byte",
+   ".htaccess có quy tắc 'Require all denied' (kiểm tra tĩnh OK) nhưng máy chủ PHP built-in bỏ qua .htaccess"
+  ],
+  "screens": [],
+  "executed_at": "2026-11-14 09:12:44",
+  "category": "Security / Exposure",
+  "bug": [
+   "BUG-018"
+  ]
+ },
+ {
+  "id": "NF-SEC-11",
+  "status": "Pass",
+  "actual": "",
+  "duration": 0.335650510999983,
+  "evidence": [
+   "lần 6 với XFF mới: HTTP 200; bị khoá"
+  ],
+  "screens": [],
+  "executed_at": "2026-11-14 09:12:44",
+  "category": "Security / Brute force",
+  "bug": []
+ }
+]

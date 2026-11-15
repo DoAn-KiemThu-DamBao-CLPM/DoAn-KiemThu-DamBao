@@ -1,0 +1,138 @@
+{
+ "baseline": {
+  "home": {
+   "p50": 3.2,
+   "p95": 3.6,
+   "max": 3.6,
+   "mean": 3.2,
+   "kb": 71.1,
+   "errors": 0
+  },
+  "home?search": {
+   "p50": 2.7,
+   "p95": 3.6,
+   "max": 4.9,
+   "mean": 2.9,
+   "kb": 66.9,
+   "errors": 0
+  },
+  "bot_detail": {
+   "p50": 8.4,
+   "p95": 12.1,
+   "max": 17.5,
+   "mean": 9.1,
+   "kb": 1078.0,
+   "errors": 0
+  },
+  "gallery": {
+   "p50": 113.5,
+   "p95": 145.4,
+   "max": 151.0,
+   "mean": 114.8,
+   "kb": 13128.2,
+   "errors": 0
+  },
+  "community_gallery": {
+   "p50": 38.5,
+   "p95": 51.5,
+   "max": 52.0,
+   "mean": 41.2,
+   "kb": 3971.3,
+   "errors": 0
+  },
+  "ideas": {
+   "p50": 8.8,
+   "p95": 11.1,
+   "max": 11.8,
+   "mean": 8.9,
+   "kb": 673.2,
+   "errors": 0
+  },
+  "login": {
+   "p50": 1.9,
+   "p95": 2.6,
+   "max": 2.7,
+   "mean": 2.0,
+   "kb": 14.5,
+   "errors": 0
+  },
+  "commission": {
+   "p50": 5.0,
+   "p95": 8.1,
+   "max": 10.6,
+   "mean": 5.4,
+   "kb": 36.7,
+   "errors": 0
+  }
+ },
+ "load": {
+  "1": {
+   "throughput": 28.9,
+   "p50": 9.5,
+   "p95": 123.1,
+   "p99": 133.5,
+   "errors": 0
+  },
+  "5": {
+   "throughput": 64.8,
+   "p50": 35.2,
+   "p95": 256.1,
+   "p99": 399.1,
+   "errors": 0
+  },
+  "10": {
+   "throughput": 68.3,
+   "p50": 91.0,
+   "p95": 436.2,
+   "p99": 547.0,
+   "errors": 0
+  },
+  "20": {
+   "throughput": 69.5,
+   "p50": 222.8,
+   "p95": 542.5,
+   "p99": 620.5,
+   "errors": 0
+  }
+ },
+ "volume": {
+  "rows": {
+   "gallery": 5012,
+   "community_posts": 2004,
+   "ideas": 502,
+   "bots": 400,
+   "comments": 3004
+  },
+  "pages": {
+   "home": {
+    "median_ms": 4.2,
+    "kb": 71.1
+   },
+   "gallery": {
+    "median_ms": 104.5,
+    "kb": 13128.2
+   },
+   "community_gallery": {
+    "median_ms": 34.6,
+    "kb": 3971.3
+   },
+   "ideas": {
+    "median_ms": 8.1,
+    "kb": 673.2
+   }
+  }
+ },
+ "queries": {
+  "home": 15,
+  "home?search": 6,
+  "bot_detail": 5,
+  "gallery": 23,
+  "community_gallery": 21,
+  "ideas": 25,
+  "login": 0,
+  "commission": 17,
+  "register": 0,
+  "shop_guest": 17,
+  "about": 6
+ }
+}

@@ -1,0 +1,15 @@
+============================= test session starts =============================
+platform win32 -- Python 3.15.0, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\pc\AppData\Local\Python\pythoncore-3.15-64\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Main 2\DoAn-KiemThu-DamBao\06_Automation_Test
+configfile: pytest.ini
+plugins: playwright-0.10.0
+collecting ... collected 5 items
+
+tests/test_guest_admin_block.py::test_guest_cannot_open_admin_page[chromium-admin_bots.php] PASSED [ 20%]
+tests/test_guest_admin_block.py::test_guest_cannot_open_admin_page[chromium-admin_stats.php] PASSED [ 40%]
+tests/test_guest_admin_block.py::test_guest_cannot_open_admin_page[chromium-admin_community.php] PASSED [ 60%]
+tests/test_guest_admin_block.py::test_guest_cannot_open_admin_page[chromium-admin_groups.php] PASSED [ 80%]
+tests/test_guest_admin_block.py::test_guest_cannot_open_admin_page[chromium-admin_add_bot.php] PASSED [100%]
+
+============================== 5 passed in 2.64s ==============================

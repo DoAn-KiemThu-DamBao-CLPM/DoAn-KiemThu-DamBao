@@ -1,0 +1,11 @@
+============================= test session starts =============================
+platform win32 -- Python 3.15.0, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\pc\AppData\Local\Python\pythoncore-3.15-64\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Main 2\DoAn-KiemThu-DamBao\06_Automation_Test
+configfile: pytest.ini
+plugins: playwright-0.10.0
+collecting ... collected 1 item
+
+tests/test_shop_insufficient_gems.py::test_buy_without_enough_gems[chromium] PASSED [100%]
+
+============================== 1 passed in 2.79s ==============================

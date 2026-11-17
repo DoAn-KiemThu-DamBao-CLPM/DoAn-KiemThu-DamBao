@@ -1,0 +1,7 @@
+﻿AT ID,TC ID,File script,Lần 1,Lần 2,Lần 3,Thời gian TB (s),Ngày chạy
+AT01,TC004,tests/test_login_success.py,Pass,Pass,Pass,3.9,13/10/2026
+AT02,TC006,tests/test_login_lockout.py,Pass,Pass,Pass,3.8,13/10/2026
+AT03,TC014,tests/test_guest_admin_block.py,Pass,Pass,Pass,3.2,13/10/2026
+AT04,TC089,tests/test_comment_xss.py,Pass,Pass,Pass,12.0,13/10/2026
+AT05,TC036,tests/test_submit_idea.py,Pass,Pass,Pass,3.5,13/10/2026
+AT06,TC064,tests/test_shop_insufficient_gems.py,Pass,Pass,Pass,2.9,13/10/2026

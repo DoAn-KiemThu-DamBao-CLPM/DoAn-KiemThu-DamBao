@@ -1,0 +1,12 @@
+============================= test session starts =============================
+platform win32 -- Python 3.15.0, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\pc\AppData\Local\Python\pythoncore-3.15-64\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Main 2\DoAn-KiemThu-DamBao\06_Automation_Test
+configfile: pytest.ini
+plugins: playwright-0.10.0
+collecting ... collected 2 items
+
+tests/test_comment_xss.py::test_comment_xss_is_escaped[chromium-<script>alert(1)</script>] PASSED [ 50%]
+tests/test_comment_xss.py::test_comment_xss_is_escaped[chromium-<img src=x onerror=alert(1)>] PASSED [100%]
+
+============================= 2 passed in 12.00s ==============================

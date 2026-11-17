@@ -37,13 +37,3 @@ python -m pytest tests/test_shop_insufficient_gems.py --headed # AT06`
 ## 3. Bằng chứng / video
 Playwright tự quay **video** và chụp **ảnh** mỗi test vào `evidence/artifacts/` (file `.webm`, `.png`);
 log từng lần chạy ở `evidence/ATxx_runN.log`. Dùng các video này làm demo khi bảo vệ.
-
-## 4. Điền lại checklist
-Sheet **Automation**: cột Lần 1/2/3 (Pass/Fail), Thời gian chạy, Ngày chạy, Bằng chứng (đường dẫn video/log).
-Sheet **Test Cases**: cột *Trạng thái* của TC004, 006, 014, 089, 036, 064 (Pass/Fail), điền *Ngày test*, *Kết quả thực tế*;
-nếu Fail phải có **Bug ID** (xem cảnh báo ở sheet Tổng quan).
-
-## Lưu ý khi test
-- AT03: các trang admin trả HTTP 200 kèm chữ "Access Denied" (không phải 403). Script coi đó là bị chặn; nếu nhóm muốn đúng nghiêm ngặt "403/chuyển hướng" thì ghi nhận thành góp ý/bug.
-- AT06: nút Mua bị `disabled` ở giao diện; script bỏ khoá nút để kiểm tra luôn phản hồi phía server.
-- Nếu một script lúc Pass lúc Fail (flaky) phải sửa trước khi nộp.

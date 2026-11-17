@@ -24,7 +24,12 @@ Người thực hiện: Võ Trường Hải · 6 script tự động, mỗi scri
 Không cần biết mật khẩu tài khoản có sẵn: mỗi test tự đăng ký 1 tài khoản mới (`at_xxxx@mail.com`, 0 gem) qua giao diện.
 
 ## 2. Chạy
-- Chạy 1 script, xem trình duyệt: `pytest tests/test_login_success.py --headed`
+- Chạy 1 script, xem trình duyệt: `python -m pytest tests/test_login_success.py --headed          # AT01
+python -m pytest tests/test_login_lockout.py --headed          # AT02
+python -m pytest tests/test_guest_admin_block.py --headed      # AT03
+python -m pytest tests/test_comment_xss.py --headed            # AT04
+python -m pytest tests/test_submit_idea.py --headed            # AT05
+python -m pytest tests/test_shop_insufficient_gems.py --headed # AT06`
 - Chạy cả 6 script: `pytest`
 - **Chạy mỗi script 3 lần và xuất kết quả (khuyên dùng):** `python run_3_times.py`
   → tạo `evidence/results.csv` (Lần 1/2/3, thời gian TB, ngày chạy) để điền sheet **Automation**.

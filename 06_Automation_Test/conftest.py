@@ -39,12 +39,20 @@ def _mysql(sql: str) -> None:
 
 
 # Xoá toàn bộ tài khoản do test tạo (username bắt đầu bằng "at_") và dữ liệu của chúng.
-# >>> CẦN SỬA theo anyn.sql: tên bảng / cột bên dưới (comments, ideas, user_id) chỉ là VÍ DỤ.
-# >>> Bảng con (có khoá ngoại tới users) phải xoá TRƯỚC, bảng users xoá SAU CÙNG.
+# Bảng con (có khoá ngoại tới users) xoá TRƯỚC, bảng users xoá SAU CÙNG.
+# Tên bảng lấy từ anyn.sql.
 CLEANUP_SQL = """
-DELETE FROM comments WHERE user_id IN (SELECT id FROM users WHERE username LIKE 'at\\_%');
-DELETE FROM ideas    WHERE user_id IN (SELECT id FROM users WHERE username LIKE 'at\\_%');
-DELETE FROM users WHERE username LIKE 'at\\_%';
+DELETE FROM comments          WHERE user_id IN (SELECT id FROM users WHERE username LIKE 'at\\_%');
+DELETE FROM idea_upvotes      WHERE user_id IN (SELECT id FROM users WHERE username LIKE 'at\\_%');
+DELETE FROM ideas             WHERE user_id IN (SELECT id FROM users WHERE username LIKE 'at\\_%');
+DELETE FROM ratings           WHERE user_id IN (SELECT id FROM users WHERE username LIKE 'at\\_%');
+DELETE FROM chat_messages     WHERE user_id IN (SELECT id FROM users WHERE username LIKE 'at\\_%');
+DELETE FROM commissions       WHERE user_id IN (SELECT id FROM users WHERE username LIKE 'at\\_%');
+DELETE FROM gem_mission_log   WHERE user_id IN (SELECT id FROM users WHERE username LIKE 'at\\_%');
+DELETE FROM user_login_logs   WHERE user_id IN (SELECT id FROM users WHERE username LIKE 'at\\_%');
+DELETE FROM user_inventory    WHERE user_id IN (SELECT id FROM users WHERE username LIKE 'at\\_%');
+DELETE FROM shop_purchase_log WHERE user_id IN (SELECT id FROM users WHERE username LIKE 'at\\_%');
+DELETE FROM users             WHERE username LIKE 'at\\_%';
 DELETE FROM login_attempts;
 """
 
